@@ -22,6 +22,8 @@
 @property (nonatomic, copy) NSString *itemKey;
 @property (nonatomic, strong) UIImage *thumbnail;
 
+//TODO: Add mL property etc.
+
 - (void)setThumbnailFromImage:(UIImage *)image;
 
 @end

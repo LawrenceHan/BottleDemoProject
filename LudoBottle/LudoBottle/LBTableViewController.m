@@ -44,9 +44,26 @@
            selector:@selector(updateTableViewForDynamicTypeSize)
                name:UIContentSizeCategoryDidChangeNotification
              object:nil];
-    
-    // Register custom cell
-    [self.tableView registerClass:[BottleCell class] forCellReuseIdentifier:NSStringFromClass([BottleCell class])];
+    self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+    self.tableView.rowHeight = 90;
+    //FIXME: To be deleted
+    [self mockData];
+}
+
+//FIXME: To be deleted
+- (void)mockData {
+    BottleModel *bottle1 = [[BottleStore sharedStore] createItem];
+    BottleModel *bottle2 = [[BottleStore sharedStore] createItem];
+    BottleModel *bottle3 = [[BottleStore sharedStore] createItem];
+    bottle1.bottleTitle = @"Absolut_1L";
+    bottle1.bottleFootnote = @"350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle350mL left in the bottle";
+    bottle1.thumbnail = [UIImage imageNamed:@"Absolut_1L"];
+    bottle2.bottleTitle = @"Guinness_450mL";
+    bottle2.bottleFootnote = @"200mL left in the bottle";
+    bottle2.thumbnail = [UIImage imageNamed:@"Guinness_450mL"];
+    bottle3.bottleTitle = @"Schnapps_750mL";
+    bottle3.bottleFootnote = @"450mL left in the bottle";
+    bottle3.thumbnail = [UIImage imageNamed:@"Schnapps_750mL"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,6 +75,14 @@
 - (void)updateTableViewForDynamicTypeSize
 {
     [self.tableView reloadData];
+}
+
+- (BottleCell *)prototypeCell {
+    if (!_prototypeCell) {
+        _prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BottleCell class])];
+    }
+    
+    return _prototypeCell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -94,16 +119,35 @@
     */
     
     // Make sure the constraints have been added to this cell, since it may have just been created from scratch
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
-    [cell setNeedsLayout];
-    [cell layoutIfNeeded];
+//    [cell setNeedsUpdateConstraints];
+//    [cell updateConstraintsIfNeeded];
+//    [cell setNeedsLayout];
+//    [cell layoutIfNeeded];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:NSStringFromClass([BottleDetailViewController class]) sender:self];
     _currentIndexPath = indexPath;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (IS_IOS8_OR_ABOVE) {
+        return UITableViewAutomaticDimension;
+    }
+    
+    //self.prototypeCell.bounds = CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
+    
+    [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
+
+    CGFloat height = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    height += 1;
+    NSLog(@"Height: %f", height);
+    return height;
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
