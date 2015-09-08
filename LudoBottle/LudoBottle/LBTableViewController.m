@@ -44,8 +44,7 @@
            selector:@selector(updateTableViewForDynamicTypeSize)
                name:UIContentSizeCategoryDidChangeNotification
              object:nil];
-    self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
-    self.tableView.rowHeight = 90;
+
     //FIXME: To be deleted
     [self mockData];
 }
@@ -81,7 +80,6 @@
     if (!_prototypeCell) {
         _prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BottleCell class])];
     }
-    
     return _prototypeCell;
 }
 
@@ -93,7 +91,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Get a new or recycled cell
-    BottleCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BottleCell class]) forIndexPath:indexPath];
+    BottleCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BottleCell class])];
     
     [self configureCell:cell forRowAtIndexPath:indexPath];
     
@@ -117,12 +115,6 @@
         BottleCell *strongSelf = weakCell;
     };
     */
-    
-    // Make sure the constraints have been added to this cell, since it may have just been created from scratch
-//    [cell setNeedsUpdateConstraints];
-//    [cell updateConstraintsIfNeeded];
-//    [cell setNeedsLayout];
-//    [cell layoutIfNeeded];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -140,9 +132,13 @@
         return UITableViewAutomaticDimension;
     }
     
-    //self.prototypeCell.bounds = CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
+    self.prototypeCell.bounds = CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
     
     [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
+
+    // Make sure the constraints have been added to this cell, since it may have just been created from scratch
+    [self.prototypeCell updateConstraintsIfNeeded];
+    [self.prototypeCell layoutIfNeeded];
 
     CGFloat height = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     height += 1;
