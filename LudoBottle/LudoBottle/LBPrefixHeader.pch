@@ -1,0 +1,22 @@
+//
+//  LBPrefixHeader.pch
+//  LudoBottle
+//
+//  Created by Hanguang on 9/8/15.
+//  Copyright (c) 2015 Hanguang. All rights reserved.
+//
+
+#ifndef LudoBottle_LBPrefixHeader_pch
+#define LudoBottle_LBPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#endif
+
+

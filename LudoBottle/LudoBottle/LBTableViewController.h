@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LBTableViewController.h
 //  LudoBottle
 //
 //  Created by Hanguang on 9/8/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LBTableViewController : UITableViewController
 
 @end
-

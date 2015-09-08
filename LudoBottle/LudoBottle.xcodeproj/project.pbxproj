@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		026556EC1B9F150F0008D659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 026556EB1B9F150F0008D659 /* main.m */; };
 		026556EF1B9F150F0008D659 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 026556EE1B9F150F0008D659 /* AppDelegate.m */; };
-		026556F21B9F150F0008D659 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026556F11B9F150F0008D659 /* ViewController.m */; };
+		026556F21B9F150F0008D659 /* NewBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026556F11B9F150F0008D659 /* NewBottleViewController.m */; };
 		026556F51B9F150F0008D659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026556F31B9F150F0008D659 /* Main.storyboard */; };
 		026556F71B9F150F0008D659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026556F61B9F150F0008D659 /* Images.xcassets */; };
 		026556FA1B9F150F0008D659 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026556F81B9F150F0008D659 /* LaunchScreen.xib */; };
 		026557061B9F15100008D659 /* LudoBottleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557051B9F15100008D659 /* LudoBottleTests.m */; };
+		026557111B9F15DA0008D659 /* LBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557101B9F15DA0008D659 /* LBTableViewController.m */; };
+		026557141B9F16590008D659 /* BottleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557131B9F16590008D659 /* BottleCell.m */; };
+		0265571B1B9F1A790008D659 /* BottleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0265571A1B9F1A790008D659 /* BottleStore.m */; };
+		0265571E1B9F1B520008D659 /* BottleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0265571D1B9F1B520008D659 /* BottleModel.m */; };
+		026557221B9F210C0008D659 /* BottleImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557211B9F210C0008D659 /* BottleImageStore.m */; };
+		026557251B9F2B490008D659 /* BottleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557241B9F2B490008D659 /* BottleDetailViewController.m */; };
+		026557281B9F2B7B0008D659 /* NewBottleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026557271B9F2B7B0008D659 /* NewBottleDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,29 @@
 		026556EB1B9F150F0008D659 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		026556ED1B9F150F0008D659 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		026556EE1B9F150F0008D659 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		026556F01B9F150F0008D659 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		026556F11B9F150F0008D659 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		026556F01B9F150F0008D659 /* NewBottleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewBottleViewController.h; path = LudoBottle/NewBottleViewController.h; sourceTree = "<group>"; };
+		026556F11B9F150F0008D659 /* NewBottleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewBottleViewController.m; path = LudoBottle/NewBottleViewController.m; sourceTree = "<group>"; };
 		026556F41B9F150F0008D659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		026556F61B9F150F0008D659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		026556F91B9F150F0008D659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		026556FF1B9F15100008D659 /* LudoBottleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LudoBottleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026557041B9F15100008D659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026557051B9F15100008D659 /* LudoBottleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LudoBottleTests.m; sourceTree = "<group>"; };
+		0265570F1B9F15DA0008D659 /* LBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBTableViewController.h; path = LudoBottle/LBTableViewController.h; sourceTree = "<group>"; };
+		026557101B9F15DA0008D659 /* LBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBTableViewController.m; path = LudoBottle/LBTableViewController.m; sourceTree = "<group>"; };
+		026557121B9F16590008D659 /* BottleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BottleCell.h; path = LudoBottle/BottleCell.h; sourceTree = "<group>"; };
+		026557131B9F16590008D659 /* BottleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BottleCell.m; path = LudoBottle/BottleCell.m; sourceTree = "<group>"; };
+		026557191B9F1A790008D659 /* BottleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleStore.h; sourceTree = "<group>"; };
+		0265571A1B9F1A790008D659 /* BottleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleStore.m; sourceTree = "<group>"; };
+		0265571C1B9F1B520008D659 /* BottleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleModel.h; sourceTree = "<group>"; };
+		0265571D1B9F1B520008D659 /* BottleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleModel.m; sourceTree = "<group>"; };
+		0265571F1B9F1C250008D659 /* LBPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBPrefixHeader.pch; sourceTree = "<group>"; };
+		026557201B9F210C0008D659 /* BottleImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleImageStore.h; sourceTree = "<group>"; };
+		026557211B9F210C0008D659 /* BottleImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleImageStore.m; sourceTree = "<group>"; };
+		026557231B9F2B490008D659 /* BottleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleDetailViewController.h; sourceTree = "<group>"; };
+		026557241B9F2B490008D659 /* BottleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleDetailViewController.m; sourceTree = "<group>"; };
+		026557261B9F2B7B0008D659 /* NewBottleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBottleDetailViewController.h; sourceTree = "<group>"; };
+		026557271B9F2B7B0008D659 /* NewBottleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBottleDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,10 @@
 		026556DD1B9F150F0008D659 = {
 			isa = PBXGroup;
 			children = (
+				026557181B9F1A130008D659 /* Store */,
+				026557171B9F1A0C0008D659 /* Controller */,
+				026557161B9F1A010008D659 /* View */,
+				026557151B9F19EB0008D659 /* Model */,
 				026556E81B9F150F0008D659 /* LudoBottle */,
 				026557021B9F15100008D659 /* LudoBottleTests */,
 				026556E71B9F150F0008D659 /* Products */,
@@ -83,9 +109,6 @@
 			children = (
 				026556ED1B9F150F0008D659 /* AppDelegate.h */,
 				026556EE1B9F150F0008D659 /* AppDelegate.m */,
-				026556F01B9F150F0008D659 /* ViewController.h */,
-				026556F11B9F150F0008D659 /* ViewController.m */,
-				026556F31B9F150F0008D659 /* Main.storyboard */,
 				026556F61B9F150F0008D659 /* Images.xcassets */,
 				026556F81B9F150F0008D659 /* LaunchScreen.xib */,
 				026556E91B9F150F0008D659 /* Supporting Files */,
@@ -98,6 +121,7 @@
 			children = (
 				026556EA1B9F150F0008D659 /* Info.plist */,
 				026556EB1B9F150F0008D659 /* main.m */,
+				0265571F1B9F1C250008D659 /* LBPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +141,51 @@
 				026557041B9F15100008D659 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		026557151B9F19EB0008D659 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				026557121B9F16590008D659 /* BottleCell.h */,
+				026557131B9F16590008D659 /* BottleCell.m */,
+				0265571C1B9F1B520008D659 /* BottleModel.h */,
+				0265571D1B9F1B520008D659 /* BottleModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		026557161B9F1A010008D659 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				026556F31B9F150F0008D659 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		026557171B9F1A0C0008D659 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0265570F1B9F15DA0008D659 /* LBTableViewController.h */,
+				026557101B9F15DA0008D659 /* LBTableViewController.m */,
+				026557231B9F2B490008D659 /* BottleDetailViewController.h */,
+				026557241B9F2B490008D659 /* BottleDetailViewController.m */,
+				026556F01B9F150F0008D659 /* NewBottleViewController.h */,
+				026556F11B9F150F0008D659 /* NewBottleViewController.m */,
+				026557261B9F2B7B0008D659 /* NewBottleDetailViewController.h */,
+				026557271B9F2B7B0008D659 /* NewBottleDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		026557181B9F1A130008D659 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				026557191B9F1A790008D659 /* BottleStore.h */,
+				0265571A1B9F1A790008D659 /* BottleStore.m */,
+				026557201B9F210C0008D659 /* BottleImageStore.h */,
+				026557211B9F210C0008D659 /* BottleImageStore.m */,
+			);
+			name = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026556F21B9F150F0008D659 /* ViewController.m in Sources */,
+				026556F21B9F150F0008D659 /* NewBottleViewController.m in Sources */,
 				026556EF1B9F150F0008D659 /* AppDelegate.m in Sources */,
 				026556EC1B9F150F0008D659 /* main.m in Sources */,
+				026557141B9F16590008D659 /* BottleCell.m in Sources */,
+				026557251B9F2B490008D659 /* BottleDetailViewController.m in Sources */,
+				0265571E1B9F1B520008D659 /* BottleModel.m in Sources */,
+				026557111B9F15DA0008D659 /* LBTableViewController.m in Sources */,
+				0265571B1B9F1A790008D659 /* BottleStore.m in Sources */,
+				026557281B9F2B7B0008D659 /* NewBottleDetailViewController.m in Sources */,
+				026557221B9F210C0008D659 /* BottleImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +326,7 @@
 				026556F41B9F150F0008D659 /* Base */,
 			);
 			name = Main.storyboard;
+			path = LudoBottle;
 			sourceTree = "<group>";
 		};
 		026556F81B9F150F0008D659 /* LaunchScreen.xib */ = {
@@ -347,7 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LudoBottle/LBPrefixHeader.pch;
 				INFOPLIST_FILE = LudoBottle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +436,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LudoBottle/LBPrefixHeader.pch;
 				INFOPLIST_FILE = LudoBottle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
