@@ -1,2 +1,2 @@
-# LudoBottle
-ludo_bottle project
+# LudoBottle like test project
+test project
